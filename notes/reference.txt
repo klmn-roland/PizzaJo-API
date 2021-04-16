@@ -1,5 +1,5 @@
 MYSQL CONNECTOR FOR C#
 
-https://dev.mysql.com/downloads/connector/net/
+download link: https://dev.mysql.com/downloads/connector/net/
 
 C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.23\Assemblies\v4.5.2\MySql.Data.dll
