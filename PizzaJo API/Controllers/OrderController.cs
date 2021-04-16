@@ -158,6 +158,7 @@ namespace pizzajo_api.Controllers
 
             return "orderWithCustomer created";
         }
+
         private string TrimAndQuote(string input)
         {
             return '"' + input.Trim() + '"';
