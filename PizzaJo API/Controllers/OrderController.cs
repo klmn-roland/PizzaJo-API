@@ -122,25 +122,27 @@ namespace pizzajo_api.Controllers
         }
 
         // POST: create orderWithCustomer
-        public string Post(string fname, string lname, string phone, string email, string zip, string cityN, string streetN, int hnumber, int amount, string type, string note)
+        public string Post(string fname, string lname, string phone, string email, string zip, string cityN, string streetN, string hnumber, string amount, string type, string note)
         {
-            fname = fname.Trim();
-            lname = lname.Trim();
-            phone = phone.Trim();
-            email = email.Trim();
-            zip = zip.Trim();
-            cityN = cityN.Trim();
-            streetN = streetN.Trim();
+            fname = TrimAndQuote(fname);
+            lname = TrimAndQuote(lname);
+            phone = TrimAndQuote(phone);
+            email = TrimAndQuote(email);
+            zip = TrimAndQuote(zip);
+            cityN = TrimAndQuote(cityN);
+            streetN = TrimAndQuote(streetN); ;
             // hnumber is an integer and works without trimming
             // amount is an integer and works without trimming
-            type = type.Trim();
-            note = note.Trim();
+            hnumber = hnumber.Trim();
+            streetN = streetN.Trim();
+            type = TrimAndQuote(type);
+            note = TrimAndQuote(note);
 
             MySqlConnection conn = WebApiConfig.conn();
 
             MySqlCommand query = conn.CreateCommand();
 
-            query.CommandText = "CALL `create_order_food`(" + fname + "," + lname + "," + phone + "," + email + "," + zip + "," + cityN + "," + streetN + "," + hnumber + "," + amount + "," + type + "," + note + "," + ");";
+            query.CommandText = "CALL `create_orderWithCustomer`(" + fname + "," + lname + "," + phone + "," + email + "," + zip + "," + cityN + "," + streetN + "," + hnumber + "," + amount + "," + type + "," + note + ");";
 
             try
             {
@@ -162,6 +164,9 @@ namespace pizzajo_api.Controllers
         {
             return "deleted: " + id;
         }
-
+        private string TrimAndQuote(string input)
+        {
+            return '"' + input.Trim() + '"';
+        }
     }
 }
