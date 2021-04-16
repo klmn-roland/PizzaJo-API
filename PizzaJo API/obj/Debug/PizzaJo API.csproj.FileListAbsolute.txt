@@ -1,6 +1,3 @@
-C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\asp api test.dll.config
-C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\asp api test.dll
-C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\asp api test.pdb
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\roslyn\csc.exe
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\roslyn\csc.exe.config
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\roslyn\csc.rsp
@@ -95,5 +92,8 @@ C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\Microsoft.CodeDom.Providers.
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.csprojAssemblyReference.cache
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.csproj.CoreCompileInputs.cache
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.csproj.CopyComplete
-C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\asp api test.dll
-C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\asp api test.pdb
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\PizzaJo API.dll.config
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\PizzaJo API.dll
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\PizzaJo API.pdb
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.dll
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.pdb
