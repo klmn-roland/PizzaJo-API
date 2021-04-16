@@ -158,15 +158,15 @@ namespace pizzajo_api.Controllers
 
             return "orderWithCustomer created";
         }
+        private string TrimAndQuote(string input)
+        {
+            return '"' + input.Trim() + '"';
+        }
 
         // DELETE: delete order
         public string Delete(int id)
         {
-            return "deleted: " + id;
-        }
-        private string TrimAndQuote(string input)
-        {
-            return '"' + input.Trim() + '"';
+            return "not yet implemented";
         }
     }
 }
