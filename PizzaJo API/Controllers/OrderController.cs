@@ -157,6 +157,7 @@ namespace pizzajo_api.Controllers
             return "orderWithCustomer created";
         }
 
+        //Trim and quote data for mysql server
         private string TrimAndQuote(string input)
         {
             return '"' + input.Trim() + '"';
