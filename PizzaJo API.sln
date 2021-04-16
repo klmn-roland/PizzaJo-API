@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaJo API", "PizzaJo API\PizzaJo API.csproj", "{AB6F4B41-0A96-49BC-943E-2CDE63803D60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB6F4B41-0A96-49BC-943E-2CDE63803D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6F4B41-0A96-49BC-943E-2CDE63803D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6F4B41-0A96-49BC-943E-2CDE63803D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6F4B41-0A96-49BC-943E-2CDE63803D60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D92BC03-97DC-4C6A-A8FB-5F7D50258FD4}
+	EndGlobalSection
+EndGlobal
