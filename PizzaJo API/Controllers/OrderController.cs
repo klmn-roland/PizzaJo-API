@@ -122,7 +122,7 @@ namespace pizzajo_api.Controllers
         }
 
         // POST: create orderWithCustomer
-        public string Post(string fname, string lname, string phone, string email, string zip, string cityN, string streetN, string hnumber, string amount, string type, string note)
+        public string Post(string fname, string lname, string phone, string email, string zip, string cityN, string streetN, int hnumber, int amount, string type, string note)
         {
             fname = TrimAndQuote(fname);
             lname = TrimAndQuote(lname);
@@ -130,11 +130,9 @@ namespace pizzajo_api.Controllers
             email = TrimAndQuote(email);
             zip = TrimAndQuote(zip);
             cityN = TrimAndQuote(cityN);
-            streetN = TrimAndQuote(streetN); ;
-            // hnumber is an integer and works without trimming
-            // amount is an integer and works without trimming
-            hnumber = hnumber.Trim();
-            streetN = streetN.Trim();
+            streetN = TrimAndQuote(streetN);
+            //hnumber is an integer and works without trimming
+            //streetN is an integer and works without trimming
             type = TrimAndQuote(type);
             note = TrimAndQuote(note);
 
