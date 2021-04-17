@@ -1,0 +1,36 @@
+PIZZAJO - API DOC.
+------------------
+
+REQUEST METHOD - MYSQL PROCEDURE NAME - ARGUMENTS 
+
+######## api/order
+
+GET select_all_order - args: none
+POST create_orderWithCustomer - args: 11pcs
+POST create_order_food - args: 3pcs
+POST set_orderStatus - args: 2pc
+.DELETE delete_order - args: 1pc (még nincs kész a db miatt)
+
+######## api/food
+
+.GET select_all_{food} - args: 1pc -> food_group_id (1=pizza;2=hamburger;3=gyros)
+
+######## api/address
+
+.GET getAddress - args: none
+
+######## api/admin
+
+.POST set_admin - args: 2pcs
+
+
+
+
+
+
+SQL lehetséges hibák ? :
+------------------------
+- delete_order procedure miért nem order_id-re töröl?
+- delete_order procedure nem törli az order-hez tartozó order_food elemeket.
+- create_order_food procedure a MAX(order_id)-hez hozza létre az order_food elemet,
+  nem lenne jobb hogyha lenne egy order_id paraméter is a procedure-ben?
