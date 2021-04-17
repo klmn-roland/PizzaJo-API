@@ -2,6 +2,7 @@ PIZZAJO - API DOC.
 ------------------
 
 REQUEST METHOD - MYSQL PROCEDURE NAME - ARGUMENTS 
+function arguments are matching with mysql procedures arguments. (except api/food)
 
 ######## api/order
 
@@ -13,11 +14,12 @@ POST set_orderStatus - args: 2pc
 
 ######## api/food
 
-.GET select_all_{food} - args: 1pc -> food_group_id (1=pizza;2=hamburger;3=gyros)
+GET select_all_{food} - args: 1pc -> food_group_id (1=pizza;2=hamburger;3=gyros)
+	 - this will return the image in a base64 encoded string
 
 ######## api/address
 
-.GET getAddress - args: none
+GET getAddress - args: none
 
 ######## api/admin
 
