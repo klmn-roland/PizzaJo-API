@@ -2,7 +2,7 @@ PIZZAJO - API DOC.
 ------------------
 
 REQUEST METHOD - MYSQL PROCEDURE NAME - ARGUMENTS 
-function arguments are matching with mysql procedures arguments. (except api/food)
+functions' arguments (& their names) are matching with mysql procedures' arguments. (except api/food)
 
 ######## api/order
 
