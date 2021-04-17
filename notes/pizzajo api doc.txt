@@ -23,8 +23,8 @@ GET getAddress - args: none
 
 ######## api/admin
 
-.POST set_admin - args: 2pcs
-
+POST set_admin - args: 2pcs
+GET none - args: none - GET request will return all username/password (TEMPORARY)
 
 
 
