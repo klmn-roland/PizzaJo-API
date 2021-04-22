@@ -163,14 +163,39 @@ namespace pizzajo_api.Controllers
             return '"' + input.Trim() + '"';
         }
 
-        // DELETE: delete order
+        // DELETE: delete_order
         public string Delete(int id)
         {
-            //delete order_food
+            //delete order_item
             //delete order
 
-            //fontos a sorrend!!!!!!!!!
-            return "not yet implemented";
+            //fontos a sorrend !
+
+            MySqlConnection conn = WebApiConfig.conn();
+
+            MySqlCommand query = conn.CreateCommand();
+
+
+            try
+            {
+                conn.Open();
+
+
+                query.CommandText = "CALL `delete_order_item`(" + id + ");";
+                query.ExecuteNonQuery();
+
+
+                query.CommandText = "CALL `delete_order`(" + id + ");";
+                query.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                return "error: " + ex.ToString();
+            }
+
+            conn.Close();
+
+            return "order and related order items deleted";
         }
     }
 }
