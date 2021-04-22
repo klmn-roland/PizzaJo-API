@@ -93,7 +93,7 @@ namespace pizzajo_api.Controllers
             return "Order #" + id + " status changed to " + status;
         }
 
-        // POST: create order_food
+        // POST: create_order_item
         public string Post(string foodID, string quan, string price)
         {
             foodID = foodID.Trim();
@@ -104,7 +104,7 @@ namespace pizzajo_api.Controllers
 
             MySqlCommand query = conn.CreateCommand();
 
-            query.CommandText = "CALL `create_order_food`(" + foodID + "," + quan + "," + price + ");";
+            query.CommandText = "CALL `create_order_item`(" + foodID + "," + quan + "," + price + ");";
 
             try
             {
@@ -118,7 +118,7 @@ namespace pizzajo_api.Controllers
 
             conn.Close();
 
-            return "order_food created";
+            return "order_item created";
         }
 
         // POST: create orderWithCustomer
