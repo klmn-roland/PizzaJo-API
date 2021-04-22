@@ -67,16 +67,16 @@ namespace pizzajo_api.Controllers
         }
 
         // POST: change order status
-        public string Post(string orderId, string status)
+        public string Post(string id, string status)
         {
-            orderId = orderId.Trim();
+            id = id.Trim();
             status = status.Trim();
 
             MySqlConnection conn = WebApiConfig.conn();
 
             MySqlCommand query = conn.CreateCommand();
 
-            query.CommandText = "CALL `set_orderStatus`(" + orderId + ","+ status + ");";
+            query.CommandText = "CALL `set_orderStatus`(" + id + ","+ status + ");";
 
             try
             {
@@ -90,7 +90,7 @@ namespace pizzajo_api.Controllers
 
             conn.Close();
 
-            return "Order #" + orderId + " status changed to " + status;
+            return "Order #" + id + " status changed to " + status;
         }
 
         // POST: create order_food
@@ -166,6 +166,10 @@ namespace pizzajo_api.Controllers
         // DELETE: delete order
         public string Delete(int id)
         {
+            //delete order_food
+            //delete order
+
+            //fontos a sorrend!!!!!!!!!
             return "not yet implemented";
         }
     }
