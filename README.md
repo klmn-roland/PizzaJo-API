@@ -27,13 +27,3 @@ functions' arguments (& their names) are matching with mysql procedures' argumen
 - POST set_admin - args: 2pcs
 - GET none - args: none - GET request will return all username/password (TEMPORARY)
 
-
-
-
-
-SQL lehetséges hibák ? :
-------------------------
-- delete_order procedure miért nem order_id-re töröl?
-- delete_order procedure nem törli az order-hez tartozó order_food elemeket.
-- create_order_food procedure a MAX(order_id)-hez hozza létre az order_food elemet,
-  nem lenne jobb hogyha lenne egy order_id paraméter is a procedure-ben?
