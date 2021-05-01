@@ -97,3 +97,6 @@ C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\PizzaJo API.dll
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\PizzaJo API.pdb
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.dll
 C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\obj\Debug\PizzaJo API.pdb
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\System.Web.Cors.dll
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\System.Web.Http.Cors.dll
+C:\Users\Roland\Desktop\PizzaJo API\PizzaJo API\bin\System.Web.Http.Cors.xml
