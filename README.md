@@ -11,7 +11,7 @@ functions' arguments (& their names) are matching with mysql procedures' argumen
 - POST create_orderWithCustomer - args: 11pcs
 - POST create_order_food - args: 3pcs
 - POST set_orderStatus - args: 2pc
-- .DELETE delete_order - args: 1pc (még nincs kész a db miatt)
+- DELETE delete_order - args: 1pc 
 
 ######## api/food
 
