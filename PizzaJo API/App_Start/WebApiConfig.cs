@@ -12,7 +12,8 @@ namespace pizzajo_api
         public static MySqlConnection conn()
         {
             string conn_string = "server=localhost;port=3306;database=restaurantweb;username=root;";
-            
+            //string conn_string = "server=localhost;port=3306;database=restaurantweb;username=root;password=mysql";
+
             MySqlConnection conn = new MySqlConnection(conn_string);
 
             return conn;

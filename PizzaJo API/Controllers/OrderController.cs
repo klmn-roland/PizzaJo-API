@@ -14,22 +14,43 @@ namespace pizzajo_api.Controllers
         public class all_orders
         {
             public int order_id { get; set; }
-            public int customer_customer_id { get; set; }
-            public int payment_payment_id { get; set; }
             public string order_time { get; set; }
             public string order_note { get; set; }
             public char order_status { get; set; }
+            public string food_name { get; set; }
+            public string food_group_name { get; set; }
+            public int order_item_quantity { get; set; }
+            public int order_item_price { get; set; }
+            public string customer_fname { get; set; }
+            public string customer_lname { get; set; }
+            public string customer_phone { get; set; }
+            public string zipcode { get; set; }
+            public string city_name { get; set; }
+            public string street_name { get; set; }
+            public int house_number { get; set; }
+            public int payment_amount { get; set; }
+            public char payment_type { get; set; }
             public string error { get; set; }
 
-            public all_orders(int order_id, int customer_customer_id, int payment_payment_id, string order_time,
-                string order_note, char order_status, string error)
+            public all_orders(int order_id, string order_time, string order_note, char order_status, string food_name, string food_group_name, int order_item_quantity, int order_item_price, string customer_fname, string customer_lname, string customer_phone, string zipcode, string city_name, string street_name, int house_number, int payment_amount, char payment_type, string error)
             {
                 this.order_id = order_id;
-                this.customer_customer_id = customer_customer_id;
-                this.payment_payment_id = payment_payment_id;
                 this.order_time = order_time;
                 this.order_note = order_note;
                 this.order_status = order_status;
+                this.food_name = food_name;
+                this.food_group_name = food_group_name;
+                this.order_item_quantity = order_item_quantity;
+                this.order_item_price = order_item_price;
+                this.customer_fname = customer_fname;
+                this.customer_lname = customer_lname;
+                this.customer_phone = customer_phone;
+                this.zipcode = zipcode;
+                this.city_name = city_name;
+                this.street_name = street_name;
+                this.house_number = house_number;
+                this.payment_amount = payment_amount;
+                this.payment_type = payment_type;
                 this.error = error;
             }
         }
@@ -53,12 +74,30 @@ namespace pizzajo_api.Controllers
 
                 while (fetch_query.Read())
                 {
-                    result.Add(new all_orders(Convert.ToInt32(fetch_query["order_id"]), Convert.ToInt32(fetch_query["customer_customer_id"]), Convert.ToInt32(fetch_query["payment_payment_id"]), fetch_query["order_time"].ToString(), fetch_query["order_note"].ToString(), Convert.ToChar(fetch_query["order_status"]), ""));
+                    result.Add(new all_orders(Convert.ToInt32(fetch_query["order_id"]),
+                    fetch_query["order_time"].ToString(),
+                    fetch_query["order_note"].ToString(),
+                    Convert.ToChar(fetch_query["order_status"]),
+                    fetch_query["food_name"].ToString(),
+                    fetch_query["food_group_name"].ToString(),
+                    Convert.ToInt32(fetch_query["order_item_quantity"]),
+                    Convert.ToInt32(fetch_query["order_item_price"]),
+                    fetch_query["customer_fname"].ToString(),
+                    fetch_query["customer_lname"].ToString(),
+                    fetch_query["customer_phone"].ToString(),
+                    fetch_query["zipcode"].ToString(),
+                    fetch_query["city_name"].ToString(),
+                    fetch_query["street_name"].ToString(),
+                    Convert.ToInt32(fetch_query["house_number"]),
+                    Convert.ToInt32(fetch_query["payment_amount"]),
+                    Convert.ToChar(fetch_query["payment_type"]),
+                    ""));
                 }
             }
             catch (MySqlException ex)
             {
-                result.Add(new all_orders(0,0,0, "", "", ' ', ex.ToString()));
+                //int , string , string , char , string , int , int , string , string , string , string , string , string , int , int , char
+                result.Add(new all_orders(0, null, null, ' ', null, null, 0, 0, null, null, null, null, null, null, 0, 0, ' ', ex.ToString()));
             }
 
             conn.Close();
@@ -76,7 +115,7 @@ namespace pizzajo_api.Controllers
 
             MySqlCommand query = conn.CreateCommand();
 
-            query.CommandText = "CALL `set_orderStatus`(" + id + ","+ status + ");";
+            query.CommandText = "CALL `set_orderStatus`(" + id + "," + status + ");";
 
             try
             {

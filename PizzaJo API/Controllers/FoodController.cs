@@ -14,14 +14,16 @@ namespace pizzajo_api.Controllers
         // this class is used when all orders are fetched
         public class all_food
         {
+            public int food_id { get; set; }
             public string food_name { get; set; }
             public int food_price { get; set; }
             public string food_ingredients { get; set; }
             public byte[] food_picture { get; set; }
             public string error { get; set; }
 
-            public all_food(string food_name, int food_price, string food_ingredients, byte[] food_picture, string error)
+            public all_food(int food_id, string food_name, int food_price, string food_ingredients, byte[] food_picture, string error)
             {
+                this.food_id = food_id;
                 this.food_name = food_name;
                 this.food_price = food_price;
                 this.food_ingredients = food_ingredients;
@@ -61,14 +63,14 @@ namespace pizzajo_api.Controllers
 
                 while (fetch_query.Read())
                 {
-                    byte[] picture = (byte[])fetch_query.GetValue(3); //4th column
+                    byte[] picture = (byte[])fetch_query.GetValue(4); //5th column
 
-                    result.Add(new all_food(fetch_query["food_name"].ToString(), Convert.ToInt32(fetch_query["food_price"]), fetch_query["food_ingredients"].ToString(), picture, ""));
+                    result.Add(new all_food(Convert.ToInt32(fetch_query["food_id"]), fetch_query["food_name"].ToString(), Convert.ToInt32(fetch_query["food_price"]), fetch_query["food_ingredients"].ToString(), picture, ""));
                 }
             }
             catch (MySqlException ex)
             {
-                result.Add(new all_food(null, 0, null, null, ex.ToString()));
+                result.Add(new all_food(0, null, 0, null, null, ex.ToString()));
             }
 
             conn.Close();
