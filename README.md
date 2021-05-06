@@ -27,3 +27,4 @@ functions' arguments (& their names) are matching with mysql procedures' argumen
 - POST set_admin - args: 2pcs
 - GET none - args: none - GET request will return all username/password (TEMPORARY)
 
+![PizzaJó](https://raw.githubusercontent.com/klmn-roland/PizzaJo-API/main/pizzajo%20image.png)
